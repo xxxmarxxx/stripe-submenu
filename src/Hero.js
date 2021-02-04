@@ -1,20 +1,24 @@
 import React from "react";
 import phoneImg from "./images/phone.svg";
 import { useGlobalContext } from "./context";
+
 const Hero = () => {
-  const {closeSubmenu} = useGlobalContext();
+  const { closeSubmenu } = useGlobalContext();
 
   return (
     <section className="hero" onMouseOver={closeSubmenu}>
       <div className="hero-center">
         <article className="hero-info">
-          <h1>Payments infrastructure for the imternet</h1>
-          <p>Millions of companies of all sozes-from startups to fFortune 500s-use
-            Stripe's software and APIs to accept payments, send payouts and mange their businesses online. 
+          <h1>
+            Payments infrastructure <br /> 
+            for the imternet
+          </h1>
+          <p>
+            Millions of companies of all sozes-from startups to fFortune
+            500s-use Stripe's software and APIs to accept payments, send payouts
+            and mange their businesses online.
           </p>
-          <button className="btn">
-            Start now
-          </button>
+          <button className="btn">Start now</button>
         </article>
         <article className="hero-images">
           <img src={phoneImg} className="phone-img" alt="phone" />
