@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Sidebar from "./Sidebar";
 import Submenu from "./Submenu";
-// lesson 146/147/148/149/150
+// lesson 146/147/148/149/150/151
 function App() {
   return (
     <>
