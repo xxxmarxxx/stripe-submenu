@@ -7,8 +7,13 @@ import sublinks from "./data";
 const Navbar = () => {
   const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
   const displaySubmenu = (e) => {
-    console.log("hello world");
-    openSubmenu();
+    // console.log(e.target);
+    const page = e.target.textContex;
+    const tempBtn = e.target.getBoundingClientRect();
+    // console.log(tempBtn)
+    const center = (tempBtn.left + tempBtn.right) / 2;
+    const bottom = tempBtn - 3;
+    openSubmenu(page, { center, bottom });
   };
   return (
     <nav className="nav">
