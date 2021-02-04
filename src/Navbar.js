@@ -2,7 +2,7 @@ import React from "react";
 import logo from "./images/logo.svg";
 import { FaBars } from "react-icons/fa";
 import { useGlobalContext } from "./context";
-import sublinks from "./data";
+// import sublinks from "./data";
 
 const Navbar = () => {
   const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
@@ -12,12 +12,13 @@ const Navbar = () => {
     const tempBtn = e.target.getBoundingClientRect();
     // console.log(tempBtn)
     const center = (tempBtn.left + tempBtn.right) / 2;
-    const bottom = tempBtn - 3;
+    const bottom = tempBtn.bottom - 3;
     openSubmenu(page, { center, bottom });
   };
   const handleSubmenu = (e)=> {
-    if(!e.target.classList.contains('link-btn'))
-    closeSubmenu()
+    if(!e.target.classList.contains('link-btn')){
+      closeSubmenu()
+    }
   }
   return (
     <nav className="nav" onMouseOver={handleSubmenu}>
@@ -45,7 +46,7 @@ const Navbar = () => {
             </button>
           </li>
         </ul>
-        <button className="btn signin-btn" onMouseOver={displaySubmenu}>
+        <button className="btn signin-btn">
           Sing in
         </button>
       </div>
