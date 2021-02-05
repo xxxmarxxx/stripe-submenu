@@ -1,5 +1,5 @@
 import React from "react";
-import phoneImg from "./images/phone.svg";
+import phoneImg from "./images/phone_2.svg";
 import { useGlobalContext } from "./context";
 
 const Hero = () => {
@@ -11,10 +11,10 @@ const Hero = () => {
         <article className="hero-info">
           <h1>
             Payments infrastructure <br /> 
-            for the imternet
+            for the internet
           </h1>
           <p>
-            Millions of companies of all sozes-from startups to fFortune
+            Millions of companies of all sizes-from startups to Fortune
             500s-use Stripe's software and APIs to accept payments, send payouts
             and mange their businesses online.
           </p>
